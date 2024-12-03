@@ -12,7 +12,7 @@ int CalculatePowerRecursive(int podstawa, int wykladnik) {
 }
 
 
-int DisplayResult(int wynik) {
+void DisplayResult(int wynik) {
     cout << "Wynik potęgowania: " << wynik << endl;
 }
 
