@@ -1,34 +1,34 @@
 #include <iostream>
 using namespace std;
 
-double CalculatePowerRecursive(double base, int exponent) {
-    if (exponent == 0) {
+int CalculatePowerRecursive(int podstawa, int wykladnik) {
+    if (wykladnik == 0) {
         return 1;
-    } else if (exponent > 0) {
-        return base * CalculatePowerRecursive(base, exponent - 1);
+    } else if (wykladnik > 0) {
+        return podstawa * CalculatePowerRecursive(podstawa, wykladnik - 1);
     } else {
-        return 1 / CalculatePowerRecursive(base, -exponent);
+        return 1 / CalculatePowerRecursive(podstawa, -wykladnik);
     }
 }
 
 
-void DisplayResult(double result) {
-    cout << "Wynik potęgowania: " << result << endl;
+int DisplayResult(int wynik) {
+    cout << "Wynik potęgowania: " << wynik << endl;
 }
 
 
 int main() {
-    double base;
-    int exponent;
+    int podstawa;
+    int wykladnik;
 
    
     cout << "Podaj liczbę podstawową: ";
-    cin >> base;
+    cin >> podstawa;
     cout << "Podaj wykładnik: ";
-    cin >> exponent;
+    cin >> wykladnik;
 
-    double result = CalculatePowerRecursive(base, exponent);
-    DisplayResult(result);
+    int wynik = CalculatePowerRecursive(podstawa, wykladnik);
+    DisplayResult(wynik);
 
     return 0;
 }
