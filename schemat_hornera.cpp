@@ -4,7 +4,7 @@ using namespace std;
 double horner(int* wspolczynniki, int stopien, double x) {
     double wynik = wspolczynniki[0]; 
     
-    for (int i = 1; i <= stopien; ++i) {
+    for (int i = 1; i <= stopien; i++) {
         wynik = wynik * x + wspolczynniki[i];
     }
 
@@ -20,7 +20,7 @@ int main() {
     
     int* wspolczynniki = new int[stopien + 1];
     
-    for (int i = 0; i <= stopien; ++i) {
+    for (int i = 0; i <= stopien; i++) {
         cout << "Podaj wspolczynnik dla x^" << (stopien - i) << ": ";
         cin >> wspolczynniki[i]; 
     }
